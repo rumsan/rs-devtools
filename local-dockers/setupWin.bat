@@ -76,3 +76,5 @@ curl -o docker-compose.yml https://raw.githubusercontent.com/rumsan/rs-devtools/
 
 echo Starting Docker containers...
 docker-compose up -d
+
+del setupWin.bat

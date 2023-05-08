@@ -109,3 +109,5 @@ curl -o docker-compose.yml 'https://github.com/rumsan/rs-devtools/local-dockers/
 
 # Start docker containers
 docker-compose up -d
+
+rm setupLinux.sh
