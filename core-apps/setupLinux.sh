@@ -105,7 +105,7 @@ echo "MONGOEX_PORT=${MONGOEX_PORT:-4446}" >> .env
 echo ".env file created successfully!"
 
 # Download docker-compose.yml file
-curl -o docker-compose.yml 'https://github.com/rumsan/rs-devtools/local-dockers/docker-compose.yml'
+curl -o docker-compose.yml 'https://raw.githubusercontent.com/rumsan/rs-devtools/main/core-apps/docker-compose.yml'
 
 # Start docker containers
 docker-compose up -d
