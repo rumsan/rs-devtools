@@ -59,33 +59,33 @@ MONGOEX_PORT=${MONGOEX_PORT:-4446}
 #!/bin/bash
 
 # Create data folder if it doesn't exist
-if [ ! -d "data" ]; then
-    mkdir "data"
+if [ ! -d "volumes" ]; then
+    mkdir "volumes"
 fi
 
 # Create subfolders inside data folder
-if [ ! -d "data/ganache" ]; then
-    mkdir "data/ganache"
+if [ ! -d "volumes/ganache" ]; then
+    mkdir "volumes/ganache"
 fi
 
-if [ ! -d "data/ipfs/data" ]; then
-    mkdir "data/ipfs/data"
+if [ ! -d "volumes/ipfs/data" ]; then
+    mkdir "volumes/ipfs/data"
 fi
 
-if [ ! -d "data/ipfs/ipfs" ]; then
-    mkdir "data/ipfs/ipfs"
+if [ ! -d "volumes/ipfs/ipfs" ]; then
+    mkdir "volumes/ipfs/ipfs"
 fi
 
-if [ ! -d "data/ipfs/ipns" ]; then
-    mkdir "data/ipfs/ipns"
+if [ ! -d "volumes/ipfs/ipns" ]; then
+    mkdir "volumes/ipfs/ipns"
 fi
 
-if [ ! -d "data/mongodb" ]; then
-    mkdir "data/mongodb"
+if [ ! -d "volumes/mongodb" ]; then
+    mkdir "volumes/mongodb"
 fi
 
-if [ ! -d "data/pgadmin" ]; then
-    mkdir "data/pgadmin"
+if [ ! -d "volumes/pgadmin" ]; then
+    mkdir "volumes/pgadmin"
 fi
 
 if [ ! -d "dropbox" ]; then
