@@ -115,6 +115,29 @@ services:
     depends_on:
       - mongodb
 
+  redis:
+    container_name: redis
+    image: bitnami/redis:latest
+    restart: always
+    ports:
+      - 6379:6379
+    environment:
+      - REDIS_PASSWORD=${PASSWORD}
+    volumes:
+      - ./volumes/redis:/data
+
+  bullboard:
+    container_name: bullboard
+    image: deadly0/bull-board
+    restart: always
+    ports:
+      - "${BULLBOARD_PORT}:3000"
+    environment:
+      REDIS_HOST: redis
+      REDIS_PASSWORD: ${PASSWORD}
+    depends_on:
+      - redis
+
 networks:
   default_network:
     driver: bridge
